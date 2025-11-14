@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #003161;
+    /* --primary-color: #34656D; */
+    --secondary-color: #fffbeb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    color: rgb(236, 236, 245);
+     
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  background-color: var(--primary-color);
+
+}
+
+.main {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  background-color: var(--primary-color);
+
+}
+.faqs{
+ 
+    width: 80%;
+    padding: 50px;
+    margin: 120px 0px 50px 0px;
+    /* margin: 0 auto; */
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 80px;
+       display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.title {
+    font-size: 3rem;
+    margin: 12px 0px;
+    color: #003161;
+}
+.faq {
+max-width:700px ;
+margin: 24px;
+padding: 12px;
+border-bottom:2px solid black ;
+cursor: pointer;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3   {
+font-size: 1.8rem;
+color: #003161;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: 400;
+}
+i{
+    font-size: 1.8rem;
+color: #003161;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: 400;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease-in;
+}
+.answer p{
+    padding-top:12px ;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    color: #003161;
+    font-family: 'Times New Roman', Times, serif;
+}
+.faq.active .answer{
+    max-height: 300px;
+}
+.faq.active .question i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in;
+}
+.question i {
+  transition: transform 0.3s ease-in;
+}
+@media (max-width: 440px) {
+ .faqs {
+    padding: 20px;
+}
+.question h3, i {
+    font-size: 1.4rem;
+ 
+}
+.answer p {
+    font-size: 1.2rem;
+ 
+}
+}
